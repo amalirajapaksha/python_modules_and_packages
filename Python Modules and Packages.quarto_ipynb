@@ -1,0 +1,250 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Python Modules and Packages\"\n",
+        "format: html\n",
+        "editor: visual\n",
+        "---\n",
+        "\n",
+        "## Introduction\n",
+        "\n",
+        "#### Modules\n",
+        "\n",
+        "A module is a file containing a set of code or a set of functions which can be included in an application. A module could be a file containing a single variable, a function, or a large codebase. This file has a `.py` extension.\n",
+        "\n",
+        "Examples:\n",
+        "\n",
+        "-   [Random](https://www.geeksforgeeks.org/python/python-random-function/)\n",
+        "-   [Math](https://www.geeksforgeeks.org/python/python-math-module/)\n",
+        "-   [Statistics](https://www.geeksforgeeks.org/python/statistics-with-python/)\\\n",
+        "\n",
+        "#### Packages\n",
+        "\n",
+        "A package is a directory containing collections of modules. The directory contains Python modules and also having `__init__.py` file by which the interpreter interprets it as a Package.\n",
+        "\n",
+        "Examples:\n",
+        "\n",
+        "-   [Numpy](https://www.geeksforgeeks.org/numpy/python-numpy/)\n",
+        "-   [Pandas](https://www.geeksforgeeks.org/pandas/pandas-tutorial/)\n",
+        "-   [Arch](https://www.geeksforgeeks.org/data-science/arch-autoregressive-conditional-heteroskedasticity/)\\\n",
+        "    \\\n",
+        "\n",
+        "[Difference Between Module, Package, and Library]{style=\"color:red;\"}\n",
+        "\n",
+        "-   **Module** → A single Python file (`.py` )\n",
+        "-   **Package** → A folder containing multiple modules\n",
+        "-   **Library** → A collection of packages/modules providing functionality\\\n",
+        "    \\\n",
+        "\n",
+        "## Modules\n",
+        "\n",
+        "### Creating a Module\n",
+        "\n",
+        "To create a module, we write our code and save that in a file with`.py` extension.\n",
+        "\n",
+        "**Example:** Let's create a `calc.py` in which we define two functions, one add and another subtract."
+      ],
+      "id": "5ddcdc83"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# calc.py\n",
+        "def add(x, y):\n",
+        "    return (x+y)\n",
+        "\n",
+        "def subtract(x, y):\n",
+        "    return (x-y)"
+      ],
+      "id": "58dd7e6a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "This is all that is required to create a module.\n",
+        "\n",
+        "### Importing a Module\n",
+        "\n",
+        "Modules can be used in another file using the `import` statement. When Python sees an import, it loads the module if it exists in the interpreter’s search path.\n",
+        "\n",
+        "**Example:** Here, we are importing the **calc** that we created earlier to perform add operation."
+      ],
+      "id": "319b720f"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import calc\n",
+        "\n",
+        "print(calc.add(10,2))"
+      ],
+      "id": "7b21cf17",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Built-in Modules\n",
+        "\n",
+        "Some common built-in Python modules include `math`, `datetime`, `os`, `sys`, `random`, `statistics`, `collections`, `json`, and `re`. These built-in modules can also be imported using the `import` statement, just as we did with the user-defined module above. Let us consider how functions are imported from a module.\n",
+        "\n",
+        "### Import Functions from a Module\n",
+        "\n",
+        "**01. Import One or More Specific Functions from a Module**\n",
+        "\n",
+        "This allows importing specific functions, classes, or variables rather than the whole module."
+      ],
+      "id": "14a43b05"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| error: true\n",
+        "\n",
+        "from random import randint, shuffle\n",
+        "\n",
+        "fruits = [\"apple\", \"banana\", \"mango\", \"orange\"]\n",
+        "\n",
+        "print(randint(5, 20)) # it returns a random integer number between [5, 20] inclusive\n",
+        "print(shuffle(fruits)) # changes the order of elements in a list randomly\n",
+        "print(choice(fruits)) # selects one random element from a given list"
+      ],
+      "id": "a39512bc",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import random\n",
+        "from random import randint, shuffle\n",
+        "\n",
+        "fruits = [\"apple\", \"banana\", \"mango\", \"orange\"]\n",
+        "print(random.choice(fruits))"
+      ],
+      "id": "443bc2f9",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "**Explanation:** Only sqrt and factorial are brought into the local namespace, so the prefix random. is not required for those functions. But when we use the choice function, it returns an error message without the prefix random.\\\n",
+        "\\\n",
+        "\n",
+        "**02. Import All Functions**\n",
+        "\n",
+        "This imports everything from a module into the current namespace."
+      ],
+      "id": "6e6f363e"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from statistics import * \n",
+        "\n",
+        "ages = [20, 20, 4, 24, 25, 22, 26, 20, 23, 22, 26]\n",
+        "print(mean(ages))       \n",
+        "print(median(ages))     \n",
+        "print(mode(ages))       \n",
+        "print(stdev(ages))      "
+      ],
+      "id": "cf9b56df",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Explanation: Every public name of `statistics` becomes directly accessible. To check what functions the module has got, we can use help(statistics), or dir(statistics)."
+      ],
+      "id": "9615e167"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import statistics\n",
+        "\n",
+        "dir(statistics)"
+      ],
+      "id": "ba8214e7",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "\\\n",
+        "\n",
+        "**03. Import With Alias**\n",
+        "\n",
+        "When we import we can also rename the name of the function."
+      ],
+      "id": "6aa3461f"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from math import pi as  P\n",
+        "\n",
+        "print(P) "
+      ],
+      "id": "0ad24986",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "\\\n",
+        "\\\n",
+        "### Installing and Importing Packages\n",
+        "\n",
+        "## Packages\n",
+        "\n",
+        "Unlike modules, packages cannot always be imported directly; they must first be installed."
+      ],
+      "id": "92e15ad4"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import seaborn"
+      ],
+      "id": "811407a9",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\MSI\\AppData\\Local\\Programs\\Python\\Python313\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
