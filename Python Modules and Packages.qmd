@@ -31,8 +31,10 @@ Examples:
 
 -   **Module** → A single Python file (`.py` )
 -   **Package** → A folder containing multiple modules
--   **Library** → A collection of packages/modules providing functionality\
-    \
+-   **Library** → A collection of packages/modules providing functionality
+
+[More](https://www.geeksforgeeks.org/python/what-is-the-difference-between-pythons-module-package-and-library/)\
+\
 
 ## Modules
 
@@ -151,14 +153,23 @@ import seaborn
 !pip install seaborn
 
 import seaborn
+
 ```
 
-\
+```{python}
+!pip install seaborn
+
+import seaborn as sn
+sn.lineplot(
+    x=[1, 2, 3, 4, 5],
+    y=[10, 15, 12, 18, 20]
+)
+```
 
 ### [Comparison with R]{style="color:blue;"}
 
 | Feature             | Python                | R                             |
-|--------------------|----------------------|------------------------------|
+|---------------------|-----------------------|-------------------------------|
 | Install package     | `pip install seaborn` | `install.packages("ggplot2")` |
 | Load package        | `import seaborn`      | `library(ggplot2)`            |
 | When install needed | Once                  | Once                          |
@@ -170,6 +181,7 @@ import seaborn
 
 Importing functions from packages is the same as importing functions from modules. The syntax remains identical; only the source (module or package) changes.
 :::
+
 \
 
 ### Creating and Accessing Packages
@@ -178,4 +190,81 @@ Importing functions from packages is the same as importing functions from module
 2.  Add Modules: Inside the directory, add Python files (modules). Each module can contain related functions or classes.
 3.  Add **init**.py: add an **init**.py file to the directory. This file tells Python that the directory should be treated as a package.
 4.  Create Sub-packages (Optional): One can organize code further by creating subdirectories with their own **init**.py files.
-5.  Import Modules: Modules or functions inside the package can be imported using dot notation, for example:`from mypackage.module1 import greet`
+5.  Import Modules: Modules or functions inside the package can be imported using dot notation, for example: `from mypackage.module1 import greet`
+
+**Example**
+
+In this example, we create a package called math_operations to organize mathematical functions. The package contains two modules:
+
+-   basic: addition and subtraction
+-   advanced: multiplication and division
+
+First create a new folder named math_operations. Then create an empty `__init__.py` file in the math_operations folder. Create modules `basic.py` and `advanced.py` with following code:
+
+```{python}
+# basic.py
+
+def add(a, b):
+    return a + b
+  
+def subtract(a, b):
+    return a - b  
+```
+
+```{python}
+# advanced.py
+
+def multiply(a, b):
+    return a * b
+  
+def divide(a, b):
+    return a / b
+  
+```
+
+The folder structure of your package should look like this:
+
+``` text
+math_operations/
+├── __init__.py
+├── basic.py
+└── advanced.py
+```
+
+Now we can import functions from the package and use them in our program.
+
+```{python}
+from math_operations import add, subtract, multiply, divide
+
+# Perform basic operations
+print(add(5, 3))
+print(subtract(10, 4))
+
+# Perform advanced operations
+print(multiply(4, 2))
+print(divide(10, 2))
+```
+
+As you can see our package works perfectly.
+
+## Popular Python Packages \\ Libraries for Data Analysis and Data Science
+
+Python provides a rich ecosystem of packages for data analysis, statistical computing, and visualization. Some of the most widely used packages include:
+
+-   **NumPy** – Provides support for numerical computing, multidimensional arrays, and mathematical operations.
+-   **Pandas** – Offers data structures such as DataFrames for data manipulation, cleaning, and analysis.
+-   **Matplotlib** – A comprehensive library for creating static, interactive, and animated visualizations.
+-   **Statsmodels** – Provides tools for statistical modeling, hypothesis testing, regression analysis, and time series analysis.
+
+These packages form the foundation of many data science workflows in Python and are conceptually similar to several commonly used R packages for data analysis and statistical modeling.
+
+A simple comparison table could also be useful:
+
+| Area                 | Python Packages | R Packages      |
+|:---------------------|:----------------|:----------------|
+| Numerical computing  | NumPy           | base R          |
+| Data manipulation    | Pandas          | dplyr           |
+| Data visualization   | Matplotlib      | ggplot2         |
+| Statistical modeling | Statsmodels     | stats, forecast |
+
+The following sections provide a more detailed discussion of these packages, including their key features, common functions, and practical applications in data analysis and data science workflows.
