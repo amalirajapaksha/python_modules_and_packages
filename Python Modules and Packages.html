@@ -141,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="creating-a-module">Creating a Module</h3>
 <p>To create a module, we write our code and save that in a file with<code>.py</code>&nbsp;extension.</p>
 <p><strong>Example:</strong> Let’s create a <code>calc.py</code> in which we define two functions, one add and another subtract.</p>
-<div id="facc40b3" class="cell" data-execution_count="1">
+<div id="492518d9" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calc.py</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(x, y):</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (x<span class="op">+</span>y)</span>
@@ -155,7 +155,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="importing-a-module">Importing a Module</h3>
 <p>Modules can be used in another file using the <code>import</code> statement. When Python sees an import, it loads the module if it exists in the interpreter’s search path.</p>
 <p><strong>Example:</strong> Here, we are importing the&nbsp;<strong>calc</strong>&nbsp;that we created earlier to perform add operation.</p>
-<div id="b32d8a2e" class="cell" data-execution_count="2">
+<div id="6562da05" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> calc</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(calc.add(<span class="dv">10</span>,<span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -172,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="import-functions-from-a-module">Import Functions from a Module</h3>
 <p><strong>01. Import One or More Specific Functions from a Module</strong></p>
 <p>This allows importing specific functions, classes, or variables rather than the whole module.</p>
-<div id="3dbb2984" class="cell" data-execution_count="3">
+<div id="cbd6cf0f" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> randint, shuffle</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"mango"</span>, <span class="st">"orange"</span>]</span>
@@ -181,14 +181,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(shuffle(fruits)) <span class="co"># changes the order of elements in a list randomly</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(choice(fruits)) <span class="co"># selects one random element from a given list</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>17
+<pre><code>14
 None</code></pre>
 </div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[46]</span><span class="ansi-green-fg">, line 7</span>
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[3]</span><span class="ansi-green-fg">, line 7</span>
 <span class="ansi-green-fg">      3</span> fruits = [<span class="ansi-yellow-fg">"apple"</span>, <span class="ansi-yellow-fg">"banana"</span>, <span class="ansi-yellow-fg">"mango"</span>, <span class="ansi-yellow-fg">"orange"</span>]
 <span class="ansi-green-fg">      4</span> 
 <span class="ansi-green-fg">      5</span> print(randint(<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">20</span>)) <span style="font-style:italic;color:rgb(95,135,135)"># it returns a random integer number between [5, 20] inclusive</span>
@@ -199,14 +199,14 @@ None</code></pre>
 </div>
 </div>
 </div>
-<div id="f01c06ae" class="cell" data-execution_count="4">
+<div id="2371e3a8" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> randint, shuffle</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"mango"</span>, <span class="st">"orange"</span>]</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random.choice(fruits))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>orange</code></pre>
+<pre><code>banana</code></pre>
 </div>
 </div>
 <p><strong>Explanation:</strong>&nbsp;Only sqrt and factorial are brought into the local namespace, so the prefix random. is not required for those functions. But when we use the choice function, it returns an error message without the prefix random.<br>
@@ -214,7 +214,7 @@ None</code></pre>
 </p>
 <p><strong>02. Import All Functions</strong></p>
 <p>This imports everything from a module into the current namespace.</p>
-<div id="f5bbe9e6" class="cell" data-execution_count="5">
+<div id="88f34622" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statistics <span class="im">import</span> <span class="op">*</span> </span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> [<span class="dv">20</span>, <span class="dv">20</span>, <span class="dv">4</span>, <span class="dv">24</span>, <span class="dv">25</span>, <span class="dv">22</span>, <span class="dv">26</span>, <span class="dv">20</span>, <span class="dv">23</span>, <span class="dv">22</span>, <span class="dv">26</span>]</span>
@@ -230,11 +230,11 @@ None</code></pre>
 </div>
 </div>
 <p>Explanation: Every public name of <code>statistics</code> becomes directly accessible. To check what functions the module has got, we can use help(statistics), or dir(statistics).</p>
-<div id="04f42df6" class="cell" data-execution_count="6">
+<div id="2c308e38" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statistics</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(statistics)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="49">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>['Counter',
  'Decimal',
  'Fraction',
@@ -332,7 +332,7 @@ None</code></pre>
 </p>
 <p><strong>03. Import With Alias</strong></p>
 <p>When we import we can also rename the name of the function.</p>
-<div id="f1cb6378" class="cell" data-execution_count="7">
+<div id="3a97a784" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> pi <span class="im">as</span>  P</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(P) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -340,6 +340,116 @@ None</code></pre>
 <pre><code>3.141592653589793</code></pre>
 </div>
 </div>
+<p><br>
+<br>
+</p>
+</section>
+</section>
+<section id="packages-1" class="level2">
+<h2 class="anchored" data-anchor-id="packages-1">Packages</h2>
+<section id="installing-and-importing-packages" class="level3">
+<h3 class="anchored" data-anchor-id="installing-and-importing-packages">Installing and Importing Packages</h3>
+<p>Unlike modules, packages cannot always be imported directly; they must first be installed.</p>
+<div id="7632bd72" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="7670a87b" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install seaborn</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Requirement already satisfied: seaborn in c:\users\msi\appdata\local\programs\python\python313\lib\site-packages (0.13.2)
+Requirement already satisfied: numpy!=1.24.0,&gt;=1.20 in c:\users\msi\appdata\local\programs\python\python313\lib\site-packages (from seaborn) (2.4.6)
+Requirement already satisfied: pandas&gt;=1.2 in c:\users\msi\appdata\local\programs\python\python313\lib\site-packages (from seaborn) (3.0.3)
+Requirement already satisfied: matplotlib!=3.6.1,&gt;=3.4 in c:\users\msi\appdata\local\programs\python\python313\lib\site-packages (from seaborn) (3.10.9)
+Requirement already satisfied: contourpy&gt;=1.0.1 in c:\users\msi\appdata\local\programs\python\python313\lib\site-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (1.3.3)
+Requirement already satisfied: cycler&gt;=0.10 in c:\users\msi\appdata\local\programs\python\python313\lib\site-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in c:\users\msi\appdata\local\programs\python\python313\lib\site-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (4.63.0)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in c:\users\msi\appdata\local\programs\python\python313\lib\site-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (1.5.0)
+Requirement already satisfied: packaging&gt;=20.0 in c:\users\msi\appdata\local\programs\python\python313\lib\site-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (26.2)
+Requirement already satisfied: pillow&gt;=8 in c:\users\msi\appdata\local\programs\python\python313\lib\site-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (12.2.0)
+Requirement already satisfied: pyparsing&gt;=3 in c:\users\msi\appdata\local\programs\python\python313\lib\site-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (3.3.2)
+Requirement already satisfied: python-dateutil&gt;=2.7 in c:\users\msi\appdata\local\programs\python\python313\lib\site-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (2.9.0.post0)
+Requirement already satisfied: tzdata in c:\users\msi\appdata\local\programs\python\python313\lib\site-packages (from pandas&gt;=1.2-&gt;seaborn) (2026.2)
+Requirement already satisfied: six&gt;=1.5 in c:\users\msi\appdata\local\programs\python\python313\lib\site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (1.17.0)</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+[notice] A new release of pip is available: 24.2 -&gt; 26.1.2
+[notice] To update, run: python.exe -m pip install --upgrade pip</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+</section>
+<section id="comparison-with-r" class="level3">
+<h3 class="anchored" data-anchor-id="comparison-with-r"><span style="color:blue;">Comparison with R</span></h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 30%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Python</th>
+<th>R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Install package</td>
+<td><code>pip install seaborn</code></td>
+<td><code>install.packages("ggplot2")</code></td>
+</tr>
+<tr class="even">
+<td>Load package</td>
+<td><code>import seaborn</code></td>
+<td><code>library(ggplot2)</code></td>
+</tr>
+<tr class="odd">
+<td>When install needed</td>
+<td>Once</td>
+<td>Once</td>
+</tr>
+<tr class="even">
+<td>When load needed</td>
+<td>Every session</td>
+<td>Every session</td>
+</tr>
+<tr class="odd">
+<td>Keyword difference</td>
+<td><code>import</code></td>
+<td><code>library()</code></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Importing Functions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Importing functions from packages is the same as importing functions from modules. The syntax remains identical; only the source (module or package) changes.</p>
+</div>
+</div>
+<p><br>
+</p>
+</section>
+<section id="creating-and-accessing-packages" class="level3">
+<h3 class="anchored" data-anchor-id="creating-and-accessing-packages">Creating and Accessing Packages</h3>
+<ol type="1">
+<li>Create a Directory: create a folder that will act as the package root.</li>
+<li>Add Modules: Inside the directory, add Python files (modules). Each module can contain related functions or classes.</li>
+<li>Add <strong>init</strong>.py: add an <strong>init</strong>.py file to the directory. This file tells Python that the directory should be treated as a package.</li>
+<li>Create Sub-packages (Optional): One can organize code further by creating subdirectories with their own <strong>init</strong>.py files.</li>
+<li>Import Modules: Modules or functions inside the package can be imported using dot notation, for example:<code>from mypackage.module1 import greet</code></li>
+</ol>
 </section>
 </section>
 

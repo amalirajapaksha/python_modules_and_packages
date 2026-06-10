@@ -113,16 +113,19 @@ print(stdev(ages))
 ```
 
 Explanation: Every public name of `statistics` becomes directly accessible. To check what functions the module has got, we can use help(statistics), or dir(statistics).
+
 ```{python}
 import statistics
 
 dir(statistics)
 ```
+
 \
 
 **03. Import With Alias**
 
 When we import we can also rename the name of the function.
+
 ```{python}
 from math import pi as  P
 
@@ -131,11 +134,13 @@ print(P)
 
 \
 \
-### Installing and Importing Packages
 
 ## Packages
 
+### Installing and Importing Packages
+
 Unlike modules, packages cannot always be imported directly; they must first be installed.
+
 ```{python}
 #| error: true
 
@@ -148,3 +153,29 @@ import seaborn
 import seaborn
 ```
 
+\
+
+### [Comparison with R]{style="color:blue;"}
+
+| Feature             | Python                | R                             |
+|--------------------|----------------------|------------------------------|
+| Install package     | `pip install seaborn` | `install.packages("ggplot2")` |
+| Load package        | `import seaborn`      | `library(ggplot2)`            |
+| When install needed | Once                  | Once                          |
+| When load needed    | Every session         | Every session                 |
+| Keyword difference  | `import`              | `library()`                   |
+
+::: callout-note
+## Importing Functions
+
+Importing functions from packages is the same as importing functions from modules. The syntax remains identical; only the source (module or package) changes.
+:::
+\
+
+### Creating and Accessing Packages
+
+1.  Create a Directory: create a folder that will act as the package root.
+2.  Add Modules: Inside the directory, add Python files (modules). Each module can contain related functions or classes.
+3.  Add **init**.py: add an **init**.py file to the directory. This file tells Python that the directory should be treated as a package.
+4.  Create Sub-packages (Optional): One can organize code further by creating subdirectories with their own **init**.py files.
+5.  Import Modules: Modules or functions inside the package can be imported using dot notation, for example:`from mypackage.module1 import greet`
