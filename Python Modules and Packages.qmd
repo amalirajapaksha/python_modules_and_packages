@@ -169,7 +169,7 @@ sn.lineplot(
 ### [Comparison with R]{style="color:blue;"}
 
 | Feature             | Python                | R                             |
-|---------------------|-----------------------|-------------------------------|
+|--------------------|----------------------|------------------------------|
 | Install package     | `pip install seaborn` | `install.packages("ggplot2")` |
 | Load package        | `import seaborn`      | `library(ggplot2)`            |
 | When install needed | Once                  | Once                          |
@@ -247,7 +247,7 @@ print(divide(10, 2))
 
 As you can see our package works perfectly.
 
-## Popular Python Packages \\ Libraries for Data Analysis and Data Science
+### Popular Python Packages \\ Libraries for Data Analysis and Data Science
 
 Python provides a rich ecosystem of packages for data analysis, statistical computing, and visualization. Some of the most widely used packages include:
 

@@ -1,6 +1,7 @@
 ---
 title: "Python Modules and Packages"
 format: html
+toc: true
 editor: visual
 ---
 
@@ -247,7 +248,7 @@ print(divide(10, 2))
 
 As you can see our package works perfectly.
 
-## Popular Python Packages \\ Libraries for Data Analysis and Data Science
+### Popular Python Packages \\ Libraries for Data Analysis and Data Science
 
 Python provides a rich ecosystem of packages for data analysis, statistical computing, and visualization. Some of the most widely used packages include:
 

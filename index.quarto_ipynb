@@ -7,6 +7,7 @@
         "---\n",
         "title: \"Python Modules and Packages\"\n",
         "format: html\n",
+        "toc: true\n",
         "editor: visual\n",
         "---\n",
         "\n",
@@ -50,7 +51,7 @@
         "\n",
         "**Example:** Let's create a `calc.py` in which we define two functions, one add and another subtract."
       ],
-      "id": "4aeb8fdb"
+      "id": "fc384c17"
     },
     {
       "cell_type": "code",
@@ -63,7 +64,7 @@
         "def subtract(x, y):\n",
         "    return (x-y)"
       ],
-      "id": "0fb4bed9",
+      "id": "0fb194a4",
       "execution_count": null,
       "outputs": []
     },
@@ -79,7 +80,7 @@
         "\n",
         "**Example:** Here, we are importing the **calc** that we created earlier to perform add operation."
       ],
-      "id": "89a52838"
+      "id": "6bec5c46"
     },
     {
       "cell_type": "code",
@@ -89,7 +90,7 @@
         "\n",
         "print(calc.add(10,2))"
       ],
-      "id": "26f0f932",
+      "id": "6ab8bc7e",
       "execution_count": null,
       "outputs": []
     },
@@ -107,7 +108,7 @@
         "\n",
         "This allows importing specific functions, classes, or variables rather than the whole module."
       ],
-      "id": "0380ffa6"
+      "id": "567fa60b"
     },
     {
       "cell_type": "code",
@@ -123,7 +124,7 @@
         "print(shuffle(fruits)) # changes the order of elements in a list randomly\n",
         "print(choice(fruits)) # selects one random element from a given list"
       ],
-      "id": "4aeae22e",
+      "id": "ad9ca9cb",
       "execution_count": null,
       "outputs": []
     },
@@ -137,7 +138,7 @@
         "fruits = [\"apple\", \"banana\", \"mango\", \"orange\"]\n",
         "print(random.choice(fruits))"
       ],
-      "id": "35c3658b",
+      "id": "811421b0",
       "execution_count": null,
       "outputs": []
     },
@@ -152,7 +153,7 @@
         "\n",
         "This imports everything from a module into the current namespace."
       ],
-      "id": "b167f4e7"
+      "id": "f44dddb8"
     },
     {
       "cell_type": "code",
@@ -166,7 +167,7 @@
         "print(mode(ages))       \n",
         "print(stdev(ages))      "
       ],
-      "id": "266479a9",
+      "id": "c4a3eec3",
       "execution_count": null,
       "outputs": []
     },
@@ -176,7 +177,7 @@
       "source": [
         "Explanation: Every public name of `statistics` becomes directly accessible. To check what functions the module has got, we can use help(statistics), or dir(statistics)."
       ],
-      "id": "6493c07d"
+      "id": "709091aa"
     },
     {
       "cell_type": "code",
@@ -186,7 +187,7 @@
         "\n",
         "dir(statistics)"
       ],
-      "id": "6af88f28",
+      "id": "c4caef35",
       "execution_count": null,
       "outputs": []
     },
@@ -200,7 +201,7 @@
         "\n",
         "When we import we can also rename the name of the function."
       ],
-      "id": "ea97cca6"
+      "id": "652e5891"
     },
     {
       "cell_type": "code",
@@ -210,7 +211,7 @@
         "\n",
         "print(P) "
       ],
-      "id": "050c557d",
+      "id": "c23eb093",
       "execution_count": null,
       "outputs": []
     },
@@ -227,7 +228,7 @@
         "\n",
         "Unlike modules, packages cannot always be imported directly; they must first be installed."
       ],
-      "id": "06fe5a4a"
+      "id": "725cf1c2"
     },
     {
       "cell_type": "code",
@@ -237,7 +238,7 @@
         "\n",
         "import seaborn"
       ],
-      "id": "2b4e42c5",
+      "id": "aff3c376",
       "execution_count": null,
       "outputs": []
     },
@@ -249,7 +250,7 @@
         "\n",
         "import seaborn"
       ],
-      "id": "fe0e681f",
+      "id": "f527b6b7",
       "execution_count": null,
       "outputs": []
     },
@@ -265,7 +266,7 @@
         "    y=[10, 15, 12, 18, 20]\n",
         ")"
       ],
-      "id": "22da3600",
+      "id": "7c19c72d",
       "execution_count": null,
       "outputs": []
     },
@@ -308,7 +309,7 @@
         "\n",
         "First create a new folder named math_operations. Then create an empty `__init__.py` file in the math_operations folder. Create modules `basic.py` and `advanced.py` with following code:"
       ],
-      "id": "4538eb86"
+      "id": "1c05f6f8"
     },
     {
       "cell_type": "code",
@@ -322,7 +323,7 @@
         "def subtract(a, b):\n",
         "    return a - b  "
       ],
-      "id": "2f18b86d",
+      "id": "ae9e2157",
       "execution_count": null,
       "outputs": []
     },
@@ -338,7 +339,7 @@
         "def divide(a, b):\n",
         "    return a / b\n"
       ],
-      "id": "b1c1a3d8",
+      "id": "0e2b8eab",
       "execution_count": null,
       "outputs": []
     },
@@ -357,7 +358,7 @@
         "\n",
         "Now we can import functions from the package and use them in our program."
       ],
-      "id": "3752252a"
+      "id": "cf280d4c"
     },
     {
       "cell_type": "code",
@@ -373,7 +374,7 @@
         "print(multiply(4, 2))\n",
         "print(divide(10, 2))"
       ],
-      "id": "8aa2bf3a",
+      "id": "27ff89a0",
       "execution_count": null,
       "outputs": []
     },
@@ -405,7 +406,7 @@
         "\n",
         "The following sections provide a more detailed discussion of these packages, including their key features, common functions, and practical applications in data analysis and data science workflows."
       ],
-      "id": "559c38ff"
+      "id": "48be9b5c"
     }
   ],
   "metadata": {
