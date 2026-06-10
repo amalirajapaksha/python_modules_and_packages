@@ -1,6 +1,7 @@
 ---
 title: "Python Modules and Packages"
 format: html
+toc: true
 editor: visual
 ---
 
