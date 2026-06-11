@@ -130,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>A module is a file containing a set of code or a set of functions which can be included in an application. A module could be a file containing a single variable, a function, or a large codebase. This file has a <code>.py</code>&nbsp;extension.</p>
 <p>Examples:</p>
 <ul>
-<li><a href="https://www.geeksforgeeks.org/python/python-random-function/">Random</a></li>
+<li><a href="https://www.geeksforgeeks.org/python/python-random-module/">Random</a></li>
 <li><a href="https://www.geeksforgeeks.org/python/python-math-module/">Math</a></li>
 <li><a href="https://www.geeksforgeeks.org/python/statistics-with-python/">Statistics</a><br>
 </li>
@@ -164,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="creating-a-module">Creating a Module</h3>
 <p>To create a module, we write our code and save that in a file with<code>.py</code>&nbsp;extension.</p>
 <p><strong>Example:</strong> Let’s create a <code>calc.py</code> in which we define two functions, one add and another subtract.</p>
-<div id="d1ece8d6" class="cell" data-execution_count="1">
+<div id="a3f37cda" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calc.py</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(x, y):</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (x<span class="op">+</span>y)</span>
@@ -178,7 +178,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="importing-a-module">Importing a Module</h3>
 <p>Modules can be used in another file using the <code>import</code> statement. When Python sees an import, it loads the module if it exists in the interpreter’s search path.</p>
 <p><strong>Example:</strong> Here, we are importing the&nbsp;<strong>calc</strong>&nbsp;that we created earlier to perform add operation.</p>
-<div id="23650f31" class="cell" data-execution_count="2">
+<div id="e6a47e0f" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> calc</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(calc.add(<span class="dv">10</span>,<span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -195,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="import-functions-from-a-module">Import Functions from a Module</h3>
 <p><strong>01. Import One or More Specific Functions from a Module</strong></p>
 <p>This allows importing specific functions, classes, or variables rather than the whole module.</p>
-<div id="e4ed53f8" class="cell" data-execution_count="3">
+<div id="d1c21bc8" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> randint, shuffle</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"mango"</span>, <span class="st">"orange"</span>]</span>
@@ -222,7 +222,7 @@ None</code></pre>
 </div>
 </div>
 </div>
-<div id="7b2791c0" class="cell" data-execution_count="4">
+<div id="abf850cf" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> randint, shuffle</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -237,7 +237,7 @@ None</code></pre>
 </p>
 <p><strong>02. Import All Functions</strong></p>
 <p>This imports everything from a module into the current namespace.</p>
-<div id="9db589ee" class="cell" data-execution_count="5">
+<div id="9b2e5698" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statistics <span class="im">import</span> <span class="op">*</span> </span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> [<span class="dv">20</span>, <span class="dv">20</span>, <span class="dv">4</span>, <span class="dv">24</span>, <span class="dv">25</span>, <span class="dv">22</span>, <span class="dv">26</span>, <span class="dv">20</span>, <span class="dv">23</span>, <span class="dv">22</span>, <span class="dv">26</span>]</span>
@@ -253,7 +253,7 @@ None</code></pre>
 </div>
 </div>
 <p>Explanation: Every public name of <code>statistics</code> becomes directly accessible. To check what functions the module has got, we can use help(statistics), or dir(statistics).</p>
-<div id="a17fbc4e" class="cell" data-execution_count="6">
+<div id="0eb2b820" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statistics</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(statistics)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -355,7 +355,7 @@ None</code></pre>
 </p>
 <p><strong>03. Import With Alias</strong></p>
 <p>When we import we can also rename the name of the function.</p>
-<div id="594933b2" class="cell" data-execution_count="7">
+<div id="000a3c8f" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> pi <span class="im">as</span>  P</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(P) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -373,10 +373,10 @@ None</code></pre>
 <section id="installing-and-importing-packages" class="level3">
 <h3 class="anchored" data-anchor-id="installing-and-importing-packages">Installing and Importing Packages</h3>
 <p>Unlike modules, packages cannot always be imported directly; they must first be installed.</p>
-<div id="639479cf" class="cell" data-execution_count="8">
+<div id="629bbce5" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="e0240b52" class="cell" data-execution_count="9">
+<div id="7c229ba5" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install seaborn</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -402,7 +402,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\msi\appdata\local\program
 [notice] To update, run: python.exe -m pip install --upgrade pip</code></pre>
 </div>
 </div>
-<div id="609dc490" class="cell" data-execution_count="10">
+<div id="fae8f516" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install seaborn</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sn</span>
@@ -515,7 +515,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\msi\appdata\local\program
 <li>advanced: multiplication and division</li>
 </ul>
 <p>First create a new folder named math_operations. Then create an empty <code>__init__.py</code> file in the math_operations folder. Create modules <code>basic.py</code> and <code>advanced.py</code> with following code:</p>
-<div id="c9118cb7" class="cell" data-execution_count="11">
+<div id="c5ad21ab" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># basic.py</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
@@ -524,7 +524,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\msi\appdata\local\program
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> subtract(a, b):</span>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">-</span> b  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="4772083e" class="cell" data-execution_count="12">
+<div id="d298236e" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># advanced.py</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> multiply(a, b):</span>
@@ -539,7 +539,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\msi\appdata\local\program
 ├── basic.py
 └── advanced.py</code></pre>
 <p>Now we can import functions from the package and use them in our program.</p>
-<div id="4b836038" class="cell" data-execution_count="13">
+<div id="a9a9fedc" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math_operations <span class="im">import</span> add, subtract, multiply, divide</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform basic operations</span></span>
