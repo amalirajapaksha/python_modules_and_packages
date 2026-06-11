@@ -51,7 +51,7 @@
         "\n",
         "**Example:** Let's create a `calc.py` in which we define two functions, one add and another subtract."
       ],
-      "id": "eb6de7b6"
+      "id": "3e2fa251"
     },
     {
       "cell_type": "code",
@@ -64,7 +64,7 @@
         "def subtract(x, y):\n",
         "    return (x-y)"
       ],
-      "id": "3d2218c6",
+      "id": "9786086d",
       "execution_count": null,
       "outputs": []
     },
@@ -80,7 +80,7 @@
         "\n",
         "**Example:** Here, we are importing the **calc** that we created earlier to perform add operation."
       ],
-      "id": "ee45a239"
+      "id": "247e380c"
     },
     {
       "cell_type": "code",
@@ -90,7 +90,7 @@
         "\n",
         "print(calc.add(10,2))"
       ],
-      "id": "3b5652e7",
+      "id": "1a1a8409",
       "execution_count": null,
       "outputs": []
     },
@@ -108,7 +108,7 @@
         "\n",
         "This allows importing specific functions, classes, or variables rather than the whole module."
       ],
-      "id": "b94b3747"
+      "id": "166b2fa9"
     },
     {
       "cell_type": "code",
@@ -121,10 +121,13 @@
         "fruits = [\"apple\", \"banana\", \"mango\", \"orange\"]\n",
         "\n",
         "print(randint(5, 20)) # it returns a random integer number between [5, 20] inclusive\n",
-        "print(shuffle(fruits)) # changes the order of elements in a list randomly\n",
+        "\n",
+        "shuffle(fruits) # changes the order of elements in a list randomly\n",
+        "print(fruits)\n",
+        "\n",
         "print(choice(fruits)) # selects one random element from a given list"
       ],
-      "id": "4ba0b812",
+      "id": "86722766",
       "execution_count": null,
       "outputs": []
     },
@@ -138,7 +141,7 @@
         "fruits = [\"apple\", \"banana\", \"mango\", \"orange\"]\n",
         "print(random.choice(fruits))"
       ],
-      "id": "c8d279b7",
+      "id": "4230bd60",
       "execution_count": null,
       "outputs": []
     },
@@ -146,14 +149,14 @@
       "cell_type": "markdown",
       "metadata": {},
       "source": [
-        "**Explanation:** Only sqrt and factorial are brought into the local namespace, so the prefix random. is not required for those functions. But when we use the choice function, it returns an error message without the prefix random.\\\n",
+        "**Explanation:** Only randint and shuffle are brought into the local namespace, so the prefix random. is not required for those functions. But when we use the choice function, it returns an error message without the prefix random.\\\n",
         "\\\n",
         "\n",
         "**02. Import All Functions**\n",
         "\n",
         "This imports everything from a module into the current namespace."
       ],
-      "id": "f252436f"
+      "id": "8f9a19c3"
     },
     {
       "cell_type": "code",
@@ -167,7 +170,7 @@
         "print(mode(ages))       \n",
         "print(stdev(ages))      "
       ],
-      "id": "22ed0569",
+      "id": "fd9e7fa3",
       "execution_count": null,
       "outputs": []
     },
@@ -177,7 +180,7 @@
       "source": [
         "Explanation: Every public name of `statistics` becomes directly accessible. To check what functions the module has got, we can use help(statistics), or dir(statistics)."
       ],
-      "id": "b4796a37"
+      "id": "d7114994"
     },
     {
       "cell_type": "code",
@@ -187,7 +190,7 @@
         "\n",
         "dir(statistics)"
       ],
-      "id": "7347d11e",
+      "id": "0370340e",
       "execution_count": null,
       "outputs": []
     },
@@ -201,7 +204,7 @@
         "\n",
         "When we import we can also rename the name of the function."
       ],
-      "id": "9a13ebd7"
+      "id": "ffb4e124"
     },
     {
       "cell_type": "code",
@@ -211,7 +214,7 @@
         "\n",
         "print(P) "
       ],
-      "id": "f157e550",
+      "id": "9f1e9ab9",
       "execution_count": null,
       "outputs": []
     },
@@ -228,7 +231,7 @@
         "\n",
         "Unlike modules, packages cannot always be imported directly; they must first be installed."
       ],
-      "id": "e7cc299b"
+      "id": "49aab260"
     },
     {
       "cell_type": "code",
@@ -238,7 +241,7 @@
         "\n",
         "import seaborn"
       ],
-      "id": "45017801",
+      "id": "657039ee",
       "execution_count": null,
       "outputs": []
     },
@@ -250,7 +253,7 @@
         "\n",
         "import seaborn"
       ],
-      "id": "0e7d79fc",
+      "id": "a254af5c",
       "execution_count": null,
       "outputs": []
     },
@@ -266,7 +269,7 @@
         "    y=[10, 15, 12, 18, 20]\n",
         ")"
       ],
-      "id": "98a9c544",
+      "id": "47e9d7e2",
       "execution_count": null,
       "outputs": []
     },
@@ -307,9 +310,32 @@
         "-   basic: addition and subtraction\n",
         "-   advanced: multiplication and division\n",
         "\n",
-        "First create a new folder named math_operations. Then create an empty `__init__.py` file in the math_operations folder. Create modules `basic.py` and `advanced.py` with following code:"
+        "First create a new folder named math_operations. Then create `__init__.py` file in the math_operations folder."
       ],
-      "id": "5392995d"
+      "id": "89b744f5"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| eval: false\n",
+        "\n",
+        "# __init__.py\n",
+        "\n",
+        "from .basic import add, subtract\n",
+        "from .advanced import multiply, divide"
+      ],
+      "id": "a59a2b98",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Then create modules `basic.py` and `advanced.py` with following code:"
+      ],
+      "id": "1a0959c5"
     },
     {
       "cell_type": "code",
@@ -323,7 +349,7 @@
         "def subtract(a, b):\n",
         "    return a - b  "
       ],
-      "id": "9ed401c9",
+      "id": "ac366874",
       "execution_count": null,
       "outputs": []
     },
@@ -339,7 +365,7 @@
         "def divide(a, b):\n",
         "    return a / b\n"
       ],
-      "id": "a9126f12",
+      "id": "25101787",
       "execution_count": null,
       "outputs": []
     },
@@ -358,7 +384,7 @@
         "\n",
         "Now we can import functions from the package and use them in our program."
       ],
-      "id": "eca087e9"
+      "id": "d77afb09"
     },
     {
       "cell_type": "code",
@@ -374,7 +400,7 @@
         "print(multiply(4, 2))\n",
         "print(divide(10, 2))"
       ],
-      "id": "7443c5d4",
+      "id": "fe7226ae",
       "execution_count": null,
       "outputs": []
     },
@@ -406,7 +432,7 @@
         "\n",
         "The following sections provide a more detailed discussion of these packages, including their key features, common functions, and practical applications in data analysis and data science workflows."
       ],
-      "id": "2db532d9"
+      "id": "4856563d"
     }
   ],
   "metadata": {

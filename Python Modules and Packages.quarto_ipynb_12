@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "0f944e8f",
+   "id": "db5bcea4",
    "metadata": {},
    "source": [
     "---\n",
@@ -56,7 +56,7 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "a3f37cda",
+   "id": "05b8bd74",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -70,7 +70,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "d1499b95",
+   "id": "f2fa6bd7",
    "metadata": {},
    "source": [
     "This is all that is required to create a module.\n",
@@ -85,7 +85,7 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "e6a47e0f",
+   "id": "b6ba5a17",
    "metadata": {},
    "outputs": [
     {
@@ -104,7 +104,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2fe61f7b",
+   "id": "3c1b1084",
    "metadata": {},
    "source": [
     "### Built-in Modules\n",
@@ -121,15 +121,15 @@
   {
    "cell_type": "code",
    "execution_count": 3,
-   "id": "d1c21bc8",
+   "id": "01062d57",
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "15\n",
-      "None\n"
+      "10\n",
+      "['apple', 'mango', 'banana', 'orange']\n"
      ]
     },
     {
@@ -139,7 +139,7 @@
      "traceback": [
       "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
       "\u001b[31mNameError\u001b[39m                                 Traceback (most recent call last)",
-      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[3]\u001b[39m\u001b[32m, line 7\u001b[39m\n\u001b[32m      3\u001b[39m fruits = [\u001b[33m\"apple\"\u001b[39m, \u001b[33m\"banana\"\u001b[39m, \u001b[33m\"mango\"\u001b[39m, \u001b[33m\"orange\"\u001b[39m]\n\u001b[32m      4\u001b[39m \n\u001b[32m      5\u001b[39m print(randint(\u001b[32m5\u001b[39m, \u001b[32m20\u001b[39m)) \u001b[38;5;66;03m# it returns a random integer number between [5, 20] inclusive\u001b[39;00m\n\u001b[32m      6\u001b[39m print(shuffle(fruits)) \u001b[38;5;66;03m# changes the order of elements in a list randomly\u001b[39;00m\n\u001b[32m----> \u001b[39m\u001b[32m7\u001b[39m print(choice(fruits)) \u001b[38;5;66;03m# selects one random element from a given list\u001b[39;00m\n",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[3]\u001b[39m\u001b[32m, line 10\u001b[39m\n\u001b[32m      6\u001b[39m \n\u001b[32m      7\u001b[39m shuffle(fruits) \u001b[38;5;66;03m# changes the order of elements in a list randomly\u001b[39;00m\n\u001b[32m      8\u001b[39m print(fruits)\n\u001b[32m      9\u001b[39m \n\u001b[32m---> \u001b[39m\u001b[32m10\u001b[39m print(choice(fruits)) \u001b[38;5;66;03m# selects one random element from a given list\u001b[39;00m\n",
       "\u001b[31mNameError\u001b[39m: name 'choice' is not defined"
      ]
     }
@@ -152,21 +152,24 @@
     "fruits = [\"apple\", \"banana\", \"mango\", \"orange\"]\n",
     "\n",
     "print(randint(5, 20)) # it returns a random integer number between [5, 20] inclusive\n",
-    "print(shuffle(fruits)) # changes the order of elements in a list randomly\n",
+    "\n",
+    "shuffle(fruits) # changes the order of elements in a list randomly\n",
+    "print(fruits)\n",
+    "\n",
     "print(choice(fruits)) # selects one random element from a given list"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "abf850cf",
+   "id": "0418f5e8",
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "apple\n"
+      "mango\n"
      ]
     }
    ],
@@ -180,10 +183,10 @@
   },
   {
    "cell_type": "markdown",
-   "id": "fc2c1e0b",
+   "id": "6cc2c4c0",
    "metadata": {},
    "source": [
-    "**Explanation:** Only sqrt and factorial are brought into the local namespace, so the prefix random. is not required for those functions. But when we use the choice function, it returns an error message without the prefix random.\\\n",
+    "**Explanation:** Only randint and shuffle are brought into the local namespace, so the prefix random. is not required for those functions. But when we use the choice function, it returns an error message without the prefix random.\\\n",
     "\\\n",
     "\n",
     "**02. Import All Functions**\n",
@@ -194,7 +197,7 @@
   {
    "cell_type": "code",
    "execution_count": 5,
-   "id": "9b2e5698",
+   "id": "09ac1ba2",
    "metadata": {},
    "outputs": [
     {
@@ -220,7 +223,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f23fb542",
+   "id": "be256242",
    "metadata": {},
    "source": [
     "Explanation: Every public name of `statistics` becomes directly accessible. To check what functions the module has got, we can use help(statistics), or dir(statistics)."
@@ -229,7 +232,7 @@
   {
    "cell_type": "code",
    "execution_count": 6,
-   "id": "0eb2b820",
+   "id": "f02b46a3",
    "metadata": {},
    "outputs": [
     {
@@ -341,7 +344,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "0adba256",
+   "id": "832aaf86",
    "metadata": {},
    "source": [
     "\\\n",
@@ -354,7 +357,7 @@
   {
    "cell_type": "code",
    "execution_count": 7,
-   "id": "000a3c8f",
+   "id": "13e6d1be",
    "metadata": {},
    "outputs": [
     {
@@ -373,7 +376,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "7cf5837d",
+   "id": "7a868685",
    "metadata": {},
    "source": [
     "\\\n",
@@ -389,7 +392,7 @@
   {
    "cell_type": "code",
    "execution_count": 8,
-   "id": "629bbce5",
+   "id": "afa6be21",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -401,7 +404,7 @@
   {
    "cell_type": "code",
    "execution_count": 9,
-   "id": "7c229ba5",
+   "id": "69ef110b",
    "metadata": {},
    "outputs": [
     {
@@ -443,7 +446,7 @@
   {
    "cell_type": "code",
    "execution_count": 10,
-   "id": "fae8f516",
+   "id": "abab20aa",
    "metadata": {},
    "outputs": [
     {
@@ -513,7 +516,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "3759516e",
+   "id": "a7c979bb",
    "metadata": {},
    "source": [
     "### [Comparison with R]{style=\"color:blue;\"}\n",
@@ -549,13 +552,36 @@
     "-   basic: addition and subtraction\n",
     "-   advanced: multiplication and division\n",
     "\n",
-    "First create a new folder named math_operations. Then create an empty `__init__.py` file in the math_operations folder. Create modules `basic.py` and `advanced.py` with following code:"
+    "First create a new folder named math_operations. Then create `__init__.py` file in the math_operations folder."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 11,
-   "id": "c5ad21ab",
+   "id": "f09df9d5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#| eval: false\n",
+    "\n",
+    "# __init__.py\n",
+    "\n",
+    "from .basic import add, subtract\n",
+    "from .advanced import multiply, divide"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "95145e52",
+   "metadata": {},
+   "source": [
+    "Then create modules `basic.py` and `advanced.py` with following code:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "06f8b596",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -570,8 +596,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 12,
-   "id": "d298236e",
+   "execution_count": 13,
+   "id": "ac4e05d6",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -586,7 +612,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "57fac9b9",
+   "id": "eba4e9f7",
    "metadata": {},
    "source": [
     "The folder structure of your package should look like this:\n",
@@ -603,8 +629,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 13,
-   "id": "a9a9fedc",
+   "execution_count": 14,
+   "id": "4a5d0ac8",
    "metadata": {},
    "outputs": [
     {
@@ -632,7 +658,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "5d179028",
+   "id": "7ecc2c94",
    "metadata": {},
    "source": [
     "As you can see our package works perfectly.\n",

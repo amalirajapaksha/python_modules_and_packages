@@ -86,7 +86,10 @@ from random import randint, shuffle
 fruits = ["apple", "banana", "mango", "orange"]
 
 print(randint(5, 20)) # it returns a random integer number between [5, 20] inclusive
-print(shuffle(fruits)) # changes the order of elements in a list randomly
+
+shuffle(fruits) # changes the order of elements in a list randomly
+print(fruits)
+
 print(choice(fruits)) # selects one random element from a given list
 ```
 
@@ -98,7 +101,7 @@ fruits = ["apple", "banana", "mango", "orange"]
 print(random.choice(fruits))
 ```
 
-**Explanation:** Only sqrt and factorial are brought into the local namespace, so the prefix random. is not required for those functions. But when we use the choice function, it returns an error message without the prefix random.\
+**Explanation:** Only randint and shuffle are brought into the local namespace, so the prefix random. is not required for those functions. But when we use the choice function, it returns an error message without the prefix random.\
 \
 
 **02. Import All Functions**
@@ -200,7 +203,19 @@ In this example, we create a package called math_operations to organize mathemat
 -   basic: addition and subtraction
 -   advanced: multiplication and division
 
-First create a new folder named math_operations. Then create an empty `__init__.py` file in the math_operations folder. Create modules `basic.py` and `advanced.py` with following code:
+First create a new folder named math_operations. Then create `__init__.py` file in the math_operations folder.
+
+```{python}
+#| eval: false
+
+# __init__.py
+
+from .basic import add, subtract
+from .advanced import multiply, divide
+
+```
+
+Then create modules `basic.py` and `advanced.py` with following code:
 
 ```{python}
 # basic.py
