@@ -13,7 +13,7 @@ A module is a file containing a set of code or a set of functions which can be i
 
 Examples:
 
--   [Random](https://www.geeksforgeeks.org/python/python-random-function/)
+-   [Random](https://www.geeksforgeeks.org/python/python-random-module/)
 -   [Math](https://www.geeksforgeeks.org/python/python-math-module/)
 -   [Statistics](https://www.geeksforgeeks.org/python/statistics-with-python/)\
 
